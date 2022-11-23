@@ -1,0 +1,17 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<section class="content">
+  <p>Viittaus BiBTeX gereroija</p>
+
+
+  <form action = "/submitReferenceInformation/" method="POST">
+   viittaustyyppi <input type="text" name="referenceType">
+   kirjan nimi <input type="text" name="title">
+   Kirjailijan nimi <input type="text" name="author">
+   julkaisuvuosi <input type="number" name="published">
+    <input type="submit" value="add book">
+
+  </form>
+</section>
