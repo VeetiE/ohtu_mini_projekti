@@ -2,7 +2,7 @@
 name = "ohtu_mini_projekti"
 version = "0.1.0"
 description = ""
-authors = ["MatiasSinisalo", "KilpiV", "Borna", "mfk99"]
+authors = ["MatiasSinisalo", "KilpiV", "Borna", "mfk99", "Gaberol"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
