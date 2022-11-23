@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, request
+from flask import redirect, render_template, request
 app = Flask(__name__)
 
 @app.route("/")
@@ -16,5 +16,5 @@ def result():
     print(bookName)
     print(author)
     print(published)
-    return render_template("base.html")
+    return redirect("/")
 
