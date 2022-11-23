@@ -7,6 +7,7 @@ authors = ["MatiasSinisalo", "KilpiV", "Borna", "mfk99"]
 [tool.poetry.dependencies]
 python = "^3.8"
 Flask = "^2.2.2"
+robotframework-seleniumlibrary = "^6.0.0"
 
 [tool.poetry.dev-dependencies]
 
