@@ -18,6 +18,7 @@ def result():
 	bookDate = request.form["published"]
 
 	if referenceType.lower() == "book" or referenceType.lower() == "kirja":
+		
 		book = Book(bookAuthor, bookName, bookDate)
 		referenceList.append(book)
 
