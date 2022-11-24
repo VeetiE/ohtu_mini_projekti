@@ -28,3 +28,4 @@ def result():
 @app.route("/print", methods=["POST"])
 def print():
 	return render_template("print.html")
+
