@@ -4,7 +4,7 @@ from src.references.book import Book
 
 
 app = Flask(__name__)
-references = []
+referenceList = []
 
 @app.route("/")
 def index():
@@ -17,14 +17,14 @@ def result():
 	bookName = request.form["title"]
 	bookDate = request.form["published"]
 
-	if referenceType.lower() == "book":
+	if referenceType.lower() == "book" or referenceType.lower() == "kirja":
 		book = Book(bookAuthor, bookName, bookDate)
-		references.append(book)
+		referenceList.append(book)
 
-	for i in references: print(i)
+	for i in referenceList: print(i)
 
 	return redirect("/")
 
 @app.route("/print_doc", methods=["POST"])
 def print_doc():
-	return render_template("print_doc.html", references = references)
+	return render_template("print_doc.html", references = referenceList)
