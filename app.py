@@ -15,7 +15,13 @@ def result():
 	bookAuthor = request.form["author"]
 	bookName = request.form["title"]
 	bookDate = request.form["published"]
-	
+
+	references = []
+
+	if referenceType.lower() == "book":
+		book = Book(bookAuthor, bookName, bookDate)
+		references.append(book)
+
 	print(referenceType)
 	print(bookAuthor)
 	print(bookName)
