@@ -25,7 +25,6 @@ def result():
 
 	return redirect("/")
 
-@app.route("/print", methods=["POST"])
-def print():
-	return render_template("print.html")
-
+@app.route("/print_doc", methods=["POST"])
+def print_doc():
+	return render_template("print_doc.html", references = references)
