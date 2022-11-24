@@ -1,9 +1,10 @@
 from flask import Flask
 from flask import redirect, render_template, request
-from references.book import Book
+from src.references.book import Book
 
 
 app = Flask(__name__)
+references = []
 
 @app.route("/")
 def index():
@@ -16,15 +17,11 @@ def result():
 	bookName = request.form["title"]
 	bookDate = request.form["published"]
 
-	references = []
-
 	if referenceType.lower() == "book":
 		book = Book(bookAuthor, bookName, bookDate)
 		references.append(book)
 
-	print(referenceType)
-	print(bookAuthor)
-	print(bookName)
-	print(bookDate)
+	for i in references: print(i)
+
 	return redirect("/")
 
