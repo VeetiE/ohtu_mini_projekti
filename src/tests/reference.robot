@@ -7,9 +7,9 @@ Test Setup  Go To Main Page
 
 
 *** Test Cases ***
-Input value to form
+Form Creates Book Correctly
     Click Element  id:referenceType
-    Set cite  testi
+    Set cite  kirja
     Click Element  id:title
     Set title  testi
     Click Element  id:author
@@ -18,7 +18,8 @@ Input value to form
     Set published  5
     
     Click Element  id:submit
-
+    Click Element  id:showRefs
+    Element Should Contain  id:refInfos  testi
 *** Keywords ***
 Go To Main Page
     Go To  ${HOME URL}
