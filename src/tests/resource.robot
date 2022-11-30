@@ -14,5 +14,5 @@ Open And Configure Browser
     Set Selenium Speed  ${DELAY}
 
 Home Page Should Be Open
-    Title Should Be  Viittaus BiBTeX gereroija
+    Title Should Be  Etusivu
 
