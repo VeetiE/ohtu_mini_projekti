@@ -19,7 +19,7 @@ def result():
 	bookAddress = request.form["address"]
 	bookDate = request.form["published"]
 
-	book = Book(referenceType, bookAuthor, bookName, bookPublisher, bookAdress, bookDate)
+	book = Book("book", bookAuthor, bookName, bookPublisher, bookAddress, bookDate)
 	referenceList.append(book)
 
 	for i in referenceList: print(i)
