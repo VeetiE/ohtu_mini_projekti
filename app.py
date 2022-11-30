@@ -1,14 +1,16 @@
 from flask import Flask
 from flask import redirect, render_template, request
 from src.references.book import Book
+from src.bibtex_generator import BibtexGenerator
 
 
 app = Flask(__name__)
-referenceList = []
+reference_list = []
+bibtex_list = []
 
 @app.route("/")
 def index():
-	return render_template("print_doc.html", references = referenceList)
+	return render_template("print_doc.html", references = reference_list)
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
 def result():
@@ -20,9 +22,14 @@ def result():
 	bookDate = request.form["published"]
 
 	book = Book("book", bookAuthor, bookName, bookPublisher, bookAddress, bookDate)
-	referenceList.append(book)
+	reference_list.append(book)
+	
+	generator = BibtexGenerator(book)
+	bibtex = generator.make_bibtex()
+	bibtex_list.append(bibtex)
 
-	for i in referenceList: print(i)
+
+	for i in reference_list: print(i)
 
 	return redirect("/")
 
@@ -30,4 +37,6 @@ def result():
 def referenceForm():
 	return render_template("base.html")
 
-
+@app.route("/printBibtex")
+def printBibtex():
+	return render_template("print_bibtex.html", bibtexlist = bibtex_list)

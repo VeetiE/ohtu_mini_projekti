@@ -1,0 +1,9 @@
+{
+    "book": [
+        "author",
+        "title",
+        "publisher",
+        "address",
+        "year"
+    ]
+}
