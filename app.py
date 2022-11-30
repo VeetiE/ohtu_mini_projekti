@@ -8,7 +8,7 @@ referenceList = []
 
 @app.route("/")
 def index():
-	return render_template("base.html")
+	return render_template("print_doc.html", references = referenceList)
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
 def result():
@@ -26,6 +26,8 @@ def result():
 
 	return redirect("/")
 
-@app.route("/print_doc", methods=["POST"])
-def print_doc():
-	return render_template("print_doc.html", references = referenceList)
+@app.route("/referenceForm")
+def referenceForm():
+	return render_template("base.html")
+
+
