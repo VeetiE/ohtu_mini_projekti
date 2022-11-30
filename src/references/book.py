@@ -5,10 +5,11 @@ class Book:
     Create a book object
     '''
 
-    def __init__(self,author,title,year):
+    def __init__(self,type,author,title,year):
+        self.type = type
         self.author = author
         self.title = title
         self.year = year
 
     def __str__(self):
-        return f"{self.author}, {self.title}, {self.year}"
+        return f"{self.type}, {self.author}, {self.title}, {self.year}"
