@@ -22,3 +22,11 @@ jobs:
         run: pip install poetry
       - name: Install dependencies
         run: poetry install
+      - name: Enter shell
+        run: poetry shell
+      - name: run flask
+        run: flask run
+      - name: run robottest
+        run: robot src/tests
+      - name: run unittest
+        run: pytest
