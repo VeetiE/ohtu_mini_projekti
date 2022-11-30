@@ -7,7 +7,7 @@ Test Setup  Go To Main Page
 
 *** Test Cases ***
 Main Page Should Be Open
-    Title Should Be   - Flaskr
+    Title Should Be   Tulostus:
 
 
 *** Keywords ***

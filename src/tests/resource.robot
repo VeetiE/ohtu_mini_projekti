@@ -5,6 +5,7 @@ ${SERVER}  localhost:5000
 ${BROWSER}  chrome
 ${DELAY}  0.2 seconds
 ${HOME URL}  http://${SERVER}
+${FORM URL}  http://${SERVER}/referenceForm
 
 *** Keywords ***
 Open And Configure Browser
