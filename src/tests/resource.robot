@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 *** Variables ***
 ${SERVER}  localhost:5000
-${BROWSER}  chrome
+${BROWSER}  headlesschrome
 ${DELAY}  0.2 seconds
 ${HOME URL}  http://${SERVER}
 ${FORM URL}  http://${SERVER}/referenceForm

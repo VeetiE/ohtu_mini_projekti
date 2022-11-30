@@ -1,4 +1,4 @@
-from references.book import Book
+from src.references.book import Book
 class ReferenceBank:
     '''
     Save references
