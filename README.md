@@ -27,7 +27,7 @@ Tämän jälkeen mene kloonin juurihakemistoon (kansio, josssa on tiedosto "app.
 
 >**poetry install**
 
-Anna koneen asentaa riippuvuudet, tämän jälkeen sovellus käynnistyy käskyillä
+Anna koneen asentaa riippuvuudet, tämän jälkeen mene hakemistoon "src", sovellus käynnistyy käskyillä
 
 >**poetry shell**
 >
