@@ -22,10 +22,9 @@ class BibtexGenerator():
 #        for i in attr:
 #            if len(i) > longest:
 #                longest = len(i)
-#        
+#
 #        for i in attr:
 #            output.join(f"  {i:longest}")
-
 
     def make_bibtex_list(self):
         bibtex_list = []
