@@ -13,4 +13,4 @@ Github-actions on hyväksynyt koodin.
 
 [Tasklog](https://docs.google.com/spreadsheets/d/1HfphglHmrU-X_7p_Du5ujbIZPMRQSqTl8imJZZynUK0/edit#gid=0)  
 
-[Burndown](https://docs.google.com/spreadsheets/d/1mXLeENTCMRcKfrcrU7u5M1xLtLcm8SqAp_H0IsWQLbE/edit?usp=sharing)  
+[Burndown](https://docs.google.com/spreadsheets/d/1ihpQ4rauSuqUK-_refRsCqEjCJql8XxM8My-ht1BwbY/edit?usp=sharing)  
