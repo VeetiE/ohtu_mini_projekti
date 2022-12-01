@@ -8,6 +8,7 @@ authors = ["MatiasSinisalo", "KilpiV", "Borna", "mfk99", "Gaberol"]
 python = "^3.8"
 Flask = "^2.2.2"
 robotframework-seleniumlibrary = "^6.0.0"
+pylint = "^2.15.7"
 
 [tool.poetry.dev-dependencies]
 
