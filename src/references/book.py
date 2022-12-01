@@ -15,3 +15,5 @@ class Book:
 
     def __str__(self):
         return f"{self.type}, {self.author}, {self.title}, {self.publisher}, {self.address}, {self.year}"
+    
+    

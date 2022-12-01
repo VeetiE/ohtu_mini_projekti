@@ -2,22 +2,17 @@ from flask import Flask
 from flask import redirect, render_template, request
 from src.references.book import Book
 from src.bibtex_generator import BibtexGenerator
-from src.json_saver import save_array_to_json
-
+from src.references.reference_bank import ReferenceBank
 
 
 app = Flask(__name__)
-reference_list = []
+
 bibtex_list = []
+referenceStorage = ReferenceBank()
 
 @app.route("/")
 def index():
-	
-
-	
-
-
-	return render_template("print_doc.html", references = reference_list)
+	return render_template("print_doc.html", references = list(referenceStorage.reference_bank.values()))
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
 def result():
@@ -29,15 +24,13 @@ def result():
 	bookDate = request.form["published"]
 
 	book = Book("book", bookAuthor, bookName, bookPublisher, bookAddress, bookDate)
-	reference_list.append(book)
-	save_array_to_json(reference_list)
+	referenceStorage.add_reference(book)
+	print(referenceStorage.reference_bank)
 	
 	generator = BibtexGenerator(book)
 	bibtex = generator.make_bibtex()
 	bibtex_list.append(bibtex)
 
-
-	for i in reference_list: print(i)
 
 	return redirect("/")
 

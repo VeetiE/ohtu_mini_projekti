@@ -1,18 +1,18 @@
-[
-    {
+{
+    "asdfa2348": {
         "type": "book",
-        "author": "asdf",
-        "title": "asdf",
-        "publisher": "asdf",
-        "address": "asdf",
-        "year": "234895"
+        "author": "asdfasdf",
+        "title": "asdfasdf",
+        "publisher": "asdfasdf",
+        "address": "asdfasdf",
+        "year": "2348"
     },
-    {
+    "asdfa2348(0)": {
         "type": "book",
-        "author": "oiafdgh",
-        "title": "oasdifgh",
-        "publisher": "oafdigh",
-        "address": "adofigh",
-        "year": "2349865"
+        "author": "asdfasdfsdfg",
+        "title": "asdfasdfsdfg",
+        "publisher": "asdfasdfsdfg",
+        "address": "asdfasdf",
+        "year": "2348"
     }
-]
+}
