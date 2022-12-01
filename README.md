@@ -16,3 +16,21 @@ Github-actions on hyväksynyt koodin.
 [Burndown](https://docs.google.com/spreadsheets/d/1ihpQ4rauSuqUK-_refRsCqEjCJql8XxM8My-ht1BwbY/edit?usp=sharing)  
 
 [CI](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml)
+
+### Asennusohjeet
+
+Kloonaa repositorio koneellesi käskyllä
+
+>**git clone https://github.com/MatiasSinisalo/ohtu_mini_projekti**
+
+Tämän jälkeen mene kloonin juurihakemistoon (kansio, josssa on tiedosto "app.py") ja anna käsky 
+
+>**poetry install**
+
+Anna koneen asentaa riippuvuudet, tämän jälkeen sovellus käynnistyy käskyillä
+
+>**poetry shell**
+>
+>**flask run**
+
+Sovellus käynnistyy nettisivulla http://127.0.0.1:5000
