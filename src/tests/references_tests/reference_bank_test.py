@@ -6,25 +6,24 @@ class TestReferenceBank(unittest.TestCase):
     def setUp(self):
         self.ref = ReferenceBank()
 
-    def test_generate_referenceString_correct(self):
+    def test_generate_reference_string_correct(self):
         kirja = Book("Kirja","Borna","Sopranos", "publisher", "adress", 2020)
         ans = self.ref.generate_referenceString(kirja)
 
         self.assertEqual('borna2020',ans)
 
 
-    def test_generate_referenceString_uncapitalized(self):
+    def test_generate_reference_string_uncapitalized(self):
         kirja = Book("Kirja","Joe Biden","Sopranos","publisher", "adress",2020)
         ans = self.ref.generate_referenceString(kirja)
-        
+
         self.assertEqual('joebi2020',ans)
 
-    def test_generate_referenceString_no_spaces(self):
+    def test_generate_reference_string_no_spaces(self):
         kirja = Book("Kirja","Joe Biden","Sopranos","publisher", "adress",2020)
         ans = self.ref.generate_referenceString(kirja)
-        
+
         self.assertEqual('joebi2020',ans)
-    
 
     def test_get_correct_dictionary(self):
 
@@ -42,4 +41,3 @@ class TestReferenceBank(unittest.TestCase):
         self.assertEqual(ans['matti2001(0)'],kirja2)
         self.assertEqual(ans['matti2001(1)'],kirja3)
         
-            
