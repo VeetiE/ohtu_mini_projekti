@@ -5,6 +5,11 @@ import json
 #reftypes = json.loads(reference_types)
 
 class BibtexGenerator():
+
+    '''
+    Create bibtex string from a reference object
+    '''
+
     def __init__(self, reference):
         self.reference = reference
 
@@ -23,4 +28,4 @@ class BibtexGenerator():
 
 
     def make_bibtex(self):
-        return "@book{CitekeyBook,\n" + f"  author = \"{self.reference.author}\",\n" + f"  title = \"{self.reference.title}\",\n" + f"  publisher = \"{self.reference.publisher}\",\n" + f"  address = \"{self.reference.address}\",\n" + f"  year = \"{self.reference.year}\"" + "}"
+        return "@book{CitekeyBook," + f"author=\"{self.reference.author}\",title=\"{self.reference.title}\",publisher=\"{self.reference.publisher}\",address=\"{self.reference.address}\",year=\"{self.reference.year}\"" + "}"
