@@ -5,7 +5,7 @@ class Book:
     Create a book object
     '''
 
-    def __init__(self,type,author,title,publisher,address,year):
+    def __init__(self,type:str,author:str,title:str,publisher:str,address:str,year:int):
         self.type = type
         self.author = author
         self.title = title
