@@ -7,7 +7,6 @@ from references.reference_bank import ReferenceBank
 
 app = Flask(__name__)
 
-bibtex_list = []
 referenceStorage = ReferenceBank()
 
 @app.route("/")
@@ -26,11 +25,6 @@ def result():
 	book = Book("book", bookAuthor, bookName, bookPublisher, bookAddress, bookDate)
 	referenceStorage.add_reference(book)
 	print(referenceStorage.reference_bank)
-	
-	generator = BibtexGenerator(book)
-	bibtex = generator.make_bibtex()
-	bibtex_list.append(bibtex)
-
 
 	return redirect("/")
 
@@ -40,4 +34,6 @@ def referenceForm():
 
 @app.route("/printBibtex")
 def printBibtex():
+	generator = BibtexGenerator(referenceStorage.reference_bank)
+	bibtex_list = generator.make_bibtex_list()
 	return render_template("print_bibtex.html", bibtexlist = bibtex_list)
