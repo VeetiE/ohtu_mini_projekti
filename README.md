@@ -14,3 +14,5 @@ Github-actions on hyväksynyt koodin.
 [Tasklog](https://docs.google.com/spreadsheets/d/1HfphglHmrU-X_7p_Du5ujbIZPMRQSqTl8imJZZynUK0/edit#gid=0)  
 
 [Burndown](https://docs.google.com/spreadsheets/d/1ihpQ4rauSuqUK-_refRsCqEjCJql8XxM8My-ht1BwbY/edit?usp=sharing)  
+
+[CI](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml)
