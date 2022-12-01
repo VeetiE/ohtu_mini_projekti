@@ -9,21 +9,21 @@ class TestReferenceBank(unittest.TestCase):
 
     def test_generate_reference_string_correct(self):
         kirja = Book("Kirja", "Borna", "Sopranos", "publisher", "adress", 2020)
-        ans = self.ref.generate_referenceString(kirja)
+        ans = self.ref.generate_reference_string(kirja)
 
         self.assertEqual('borna2020', ans)
 
     def test_generate_reference_string_uncapitalized(self):
         kirja = Book("Kirja", "Joe Biden", "Sopranos",
                      "publisher", "adress", 2020)
-        ans = self.ref.generate_referenceString(kirja)
+        ans = self.ref.generate_reference_string(kirja)
 
         self.assertEqual('joebi2020', ans)
 
     def test_generate_reference_string_no_spaces(self):
         kirja = Book("Kirja", "Joe Biden", "Sopranos",
                      "publisher", "adress", 2020)
-        ans = self.ref.generate_referenceString(kirja)
+        ans = self.ref.generate_reference_string(kirja)
 
         self.assertEqual('joebi2020', ans)
 

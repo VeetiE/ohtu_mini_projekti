@@ -1,5 +1,5 @@
 from references.book import Book
-from json_saver import save_array_to_json, save_dictionary_to_json
+from json_saver import  save_dictionary_to_json
 
 
 class ReferenceBank:
@@ -13,11 +13,11 @@ class ReferenceBank:
 
     def add_reference(self, book: Book):
 
-        refString = self.generate_referenceString(book)
-        self.reference_bank[refString] = book
+        ref_string = self.generate_reference_string(book)
+        self.reference_bank[ref_string] = book
         save_dictionary_to_json(self.reference_bank)
 
-    def generate_referenceString(self, book: Book):
+    def generate_reference_string(self, book: Book):
 
         name = book.author.replace(" ", "")
         published = book.year
