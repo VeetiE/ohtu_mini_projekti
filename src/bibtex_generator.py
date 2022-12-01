@@ -1,4 +1,4 @@
-import json
+
 #from references import reference_types
 
 
@@ -28,14 +28,14 @@ class BibtexGenerator():
 
     def make_bibtex_list(self):
         bibtex_list = []
-        for r in self.reference_dict:
-            s = "@book{"
-            s += f"{r},"
-            s += f"author=\"{self.reference_dict[r].author}\","
-            s += f"title=\"{self.reference_dict[r].title}\","
-            s += f"publisher=\"{self.reference_dict[r].publisher}\","
-            s += f"address=\"{self.reference_dict[r].address}\","
-            s += f"year=\"{self.reference_dict[r].year}\""
-            s += "}"
-            bibtex_list.append(s)
+        for reference in self.reference_dict:
+            string = "@book{"
+            string += f"{reference},"
+            string += f"author=\"{self.reference_dict[reference].author}\","
+            string += f"title=\"{self.reference_dict[reference].title}\","
+            string += f"publisher=\"{self.reference_dict[reference].publisher}\","
+            string += f"address=\"{self.reference_dict[reference].address}\","
+            string += f"year=\"{self.reference_dict[reference].year}\""
+            string += "}"
+            bibtex_list.append(string)
         return bibtex_list

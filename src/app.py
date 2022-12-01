@@ -1,8 +1,9 @@
 from flask import Flask
 from flask import redirect, render_template, request
 from references.book import Book
-from bibtex_generator import BibtexGenerator
 from references.reference_bank import ReferenceBank
+from bibtex_generator import BibtexGenerator
+
 
 
 app = Flask(__name__)
@@ -12,7 +13,8 @@ reference_storage = ReferenceBank()
 
 @app.route("/")
 def index():
-    return render_template("print_doc.html", references=list(reference_storage.reference_bank.values()))
+    return render_template("print_doc.html",
+    references=list(reference_storage.reference_bank.values()))
 
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
@@ -33,12 +35,12 @@ def result():
 
 
 @app.route("/referenceForm")
-def referenceForm():
+def reference_form():
     return render_template("base.html")
 
 
 @app.route("/printBibtex")
-def printBibtex():
+def print_bibtex():
     generator = BibtexGenerator(reference_storage.reference_bank)
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
