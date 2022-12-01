@@ -1,0 +1,11 @@
+<title>Etusivu</title>
+<h1>Tulostus:</h1>
+
+<a href="/referenceForm" id="refFormLink">Lisää lähdeviittaus</a>
+<a href="/printBibtex" id="printBibtexLink">Näytä viittaukset BibTeX-muodossa</a>
+
+<ul id="refInfos">
+{% for reference in references %} 
+<li>{{reference}}</li>
+{% endfor %}
+</ul>

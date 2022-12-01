@@ -1,5 +1,5 @@
-from src.references.book import Book
-from src.json_saver import save_array_to_json, save_dictionary_to_json
+from references.book import Book
+from json_saver import save_array_to_json, save_dictionary_to_json
 class ReferenceBank:
     '''
     Save references
