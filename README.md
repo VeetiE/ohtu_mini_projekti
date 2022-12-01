@@ -1,6 +1,8 @@
 # Ohtu miniprojekti  
 [![CI](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml/badge.svg)](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml)
 
+[Uusin release](https://github.com/MatiasSinisalo/ohtu_mini_projekti/releases
+)  
 ## Dokumentointi  
 
 ### Definition of Done  
