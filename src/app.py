@@ -34,10 +34,18 @@ def result():
     return redirect("/")
 
 
-@app.route("/referenceForm")
+@app.route("/referenceForm",methods=["GET","POST"])
 def reference_form():
-    
+    if request.method == "POST":
+        fill = request.form["option"]
+        print(fill)
     return render_template("base.html",refType=reference_type_storage.reference_types)
+
+@app.route("/referenceForm/<filter>")
+def reference_form_filtered(filter):
+    fields = reference_type_storage.reference_types[filter]
+    n = {filter:reference_type_storage.reference_types[filter]}
+    return render_template("base.html",refType=n)
 
 
 @app.route("/printBibtex")
@@ -45,7 +53,6 @@ def print_bibtex():
     generator = BibtexGenerator(reference_storage.reference_bank)
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
-
 
 @app.route("/referenceTypesAdd")
 def reference_types_add():

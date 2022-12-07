@@ -9,9 +9,9 @@
   <form action = "/submitReferenceInformation/" method="POST">
     <label for="references">Choose reference type</label>
     <select name="references" id="refereces">
-      <option value="Book">Book</option>
-      <option value="Article">Article</option>
-      <option value="inproceedings">inproceedings</option>
+      {% for key,value in refType.items() %}
+      <option value={{key}} name="option">{{key}}</option>
+      {% endfor %}
     </select>
     <input type="submit" value="Submit">
 
