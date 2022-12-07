@@ -19,6 +19,15 @@ class ReferenceTypeBank:
                'techreport':["author","title","institution","published"],
                'unpublished':["author","title"]
                }
+               
+        self.all_possible_types = [
+            "address", "author", "booktitle", "chapter", 
+            "crossref", "edition", "editor", "howpublished", 
+            "institution", "journal", "key", "month", 
+            "note", "number", "organization", "pages", 
+            "publisher", "school", "series", "title", 
+            "type", "volume", "year"
+            ]
     
     def add_new_reference_type(self, reference_type_name:str, reference_type_fields):
         if reference_type_name not in self.reference_types:

@@ -3,21 +3,15 @@
 <form>
     <fieldset>
         <legend>Valitse lisättävät kentät</legend>
+        
+        {% for field in refType %}
+
         <div>
-            <input type = "checkbox" id = "address" name="field" value = "address"/>
-            <label for = "address">Address</label>
+            <input type = "checkbox" id = {{field}} name="field" value = "address"/>
+            <label for = {{field}}>{{field}}</label>
         </div>    
-        <div>
-            <input type = "checkbox" id = "annote" name="field" value= "annote"/>
-            <label for = "annote">Annote</label>
-        </div>    
-        <div>
-            <input type = "checkbox" id = "author" name="field" value="author"/>
-            <label for = "author">Author</label>
-        </div>    
-        <div>
-            <button type = "submit">Lisää</button>
-        </div>
+
+        {% endfor %}
     </fieldset>
 </form>
 

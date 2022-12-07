@@ -54,6 +54,8 @@ def print_bibtex():
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
 
-@app.route("/referenceTypesAdd")
+@app.route("/referenceTypesAdd", methods = ["GET", "POST"])
 def reference_types_add():
-    return render_template("reference_types_add.html")
+    if request.method == "POST":
+        pass
+    return render_template("reference_types_add.html", refType =reference_type_storage.all_possible_types)
