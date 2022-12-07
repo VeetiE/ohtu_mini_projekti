@@ -7,6 +7,7 @@ htmlcov
 database.db
 test.db
 testi.json
+unittest.json
 **testi.json
 log.html
 output.xml
