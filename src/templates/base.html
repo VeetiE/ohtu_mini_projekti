@@ -5,8 +5,7 @@
 <section class="content">
   <p>Viittaus BiBTeX generoija</p>
 
-
-  <form action = "/submitReferenceInformation/" method="POST">
+  <form action="/referenceForm/setFilter/", method="POST">
     <label for="references">Choose reference type</label>
     <select name="references" id="refereces">
       {% for key,value in refType.items() %}
@@ -14,9 +13,12 @@
       {% endfor %}
     </select>
     <input type="submit" value="Submit">
+  </form>
 
+  <form action = "/submitReferenceInformation/" method="POST">
     {% for key,value in refType.items() %}
       {% for x in value %}
+      <br/>
         {% if value is number %}
         <b>{{x}}</b> <input id={{value}} type="number" name="title"\>
         {% else %}
@@ -26,7 +28,8 @@
       {% endfor %}
       
       {% endfor %}
-
+      <br/>
+    <input type="submit" value="create new">
   </form>
 
   

@@ -34,6 +34,7 @@ def result():
     return redirect("/")
 
 
+
 @app.route("/referenceForm",methods=["GET","POST"])
 def reference_form():
     if request.method == "POST":
@@ -41,12 +42,20 @@ def reference_form():
         print(fill)
     return render_template("base.html",refType=reference_type_storage.reference_types)
 
+@app.route("/referenceForm/setFilter/", methods=["POST"])
+def reference_form_set_filter():
+    filter = request.form["references"]
+    print(filter)
+    return redirect("/referenceForm/" + filter)
+
 @app.route("/referenceForm/<filter>")
 def reference_form_filtered(filter):
-    fields = reference_type_storage.reference_types[filter]
+  
+    print("hello")
+   
     n = {filter:reference_type_storage.reference_types[filter]}
+    print(n)
     return render_template("base.html",refType=n)
-
 
 @app.route("/printBibtex")
 def print_bibtex():
