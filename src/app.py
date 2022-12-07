@@ -45,3 +45,8 @@ def print_bibtex():
     generator = BibtexGenerator(reference_storage.reference_bank)
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
+
+
+@app.route("/referenceTypesAdd")
+def reference_types_add():
+    return render_template("reference_types_add.html")
