@@ -3,13 +3,13 @@ from flask import redirect, render_template, request
 from references.book import Book
 from references.reference_bank import ReferenceBank
 from bibtex_generator import BibtexGenerator
-
+from references.reference_type_bank import ReferenceTypeBank
 
 
 app = Flask(__name__)
 
 reference_storage = ReferenceBank()
-
+reference_type_storage = ReferenceTypeBank()
 
 @app.route("/")
 def index():
@@ -36,7 +36,8 @@ def result():
 
 @app.route("/referenceForm")
 def reference_form():
-    return render_template("base.html")
+    
+    return render_template("base.html",refType=reference_type_storage.reference_types)
 
 
 @app.route("/printBibtex")

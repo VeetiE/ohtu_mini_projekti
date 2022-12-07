@@ -7,13 +7,25 @@
 
 
   <form action = "/submitReferenceInformation/" method="POST">
-   viittaustyyppi <input id="reference_type" type="text" name="reference_type">
-   kirjan nimi <input id="title" type="text" name="title">
-   Kirjailijan nimi <input id="author" type="text" name="author">
-   kustantaja <input id="publisher" type="text" name="publisher">
-   julkaisupaikka <input id="address" type="text" name="address">
-   julkaisuvuosi <input id="published" type="number" name="published">
-    <input id="submit" type="submit" value="add book">
+    <label for="references">Choose reference type</label>
+    <select name="references" id="refereces">
+      <option value="Book">Book</option>
+      <option value="Article">Article</option>
+      <option value="inproceedings">inproceedings</option>
+    </select>
+    <input type="submit" value="Submit">
+
+    {% for key,value in refType.items() %}
+      {% for x in value %}
+        {% if value is number %}
+        <b>{{x}}</b> <input id={{value}} type="number" name="title"\>
+        {% else %}
+        <b>{{x}}</b>  <input id={{value}} type="text" name="title"\> 
+      
+      {% endif %}
+      {% endfor %}
+      
+      {% endfor %}
 
   </form>
 
