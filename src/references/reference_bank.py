@@ -15,7 +15,7 @@ class ReferenceBank:
 
         ref_string = self.generate_reference_string(book)
         self.reference_bank[ref_string] = book
-        save_dictionary_to_json(self.reference_bank)
+        save_dictionary_to_json(self.reference_bank, "testi.json")
 
     def generate_reference_string(self, book: Book):
 
