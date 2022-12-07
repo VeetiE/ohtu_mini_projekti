@@ -2,7 +2,7 @@
 class Book:
 
     '''
-    Create a book object
+    DON'T USE THIS
     '''
 
     def __init__(self, ref_type, author: str, title: str, publisher: str, address: str, year: int):
