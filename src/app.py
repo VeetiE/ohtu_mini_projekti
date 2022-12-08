@@ -16,7 +16,8 @@ reference_type_storage = ReferenceTypeBank()
 
 @app.route("/")
 def index():
-    return render_template("print_doc.html", references=list(reference_storage.reference_bank.values()))
+    
+    return render_template("print_doc.html", content=reference_storage.reference_bank)
 
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
