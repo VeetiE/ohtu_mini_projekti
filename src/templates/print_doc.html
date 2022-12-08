@@ -1,9 +1,11 @@
-<title>Etusivu</title>
-<h1>Tulostus:</h1>
+<title>BibTeX-viittaus generaattori</title>
+<h1>Lisää viittaus ja muuta se BibTeX-muotoon!</h1>
 
 <a href="/referenceForm" id="refFormLink">Lisää lähdeviittaus</a>
 <a href="/printBibtex" id="printBibtexLink">Näytä viittaukset BibTeX-muodossa</a>
+<a href="/referenceTypesAdd" id="addNewReferenceType">Lisää uusi viittaustyyppi</a> 
 
+<h3>Viittaukset:</h3>
 <ul id="refInfos">
 {% for reference in references %} 
 <li>{{reference}}</li>

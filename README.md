@@ -11,7 +11,9 @@ Robot framework testit on kirjoitettu ja menevät läpi.
 Toinen ohjelmoija on katsonut koodin läpi.  
 Github-actions on hyväksynyt koodin.  
 
-[Backlog](https://docs.google.com/spreadsheets/d/1R7Q2cNVjgsSZECTlZ_ocQv4pzd5d8XxJI1bs-lg3rlY/edit?usp=sharing)  
+[Sprint Backlog](https://docs.google.com/spreadsheets/d/1HfphglHmrU-X_7p_Du5ujbIZPMRQSqTl8imJZZynUK0/edit#gid=0)
+
+[Product Backlog](https://docs.google.com/spreadsheets/d/1R7Q2cNVjgsSZECTlZ_ocQv4pzd5d8XxJI1bs-lg3rlY/edit?usp=sharing)  
 
 [Burndown](https://docs.google.com/spreadsheets/d/1ihpQ4rauSuqUK-_refRsCqEjCJql8XxM8My-ht1BwbY/edit?usp=sharing)  
 
