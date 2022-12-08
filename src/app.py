@@ -53,9 +53,9 @@ def reference_form_filtered(filter):
   
     print("hello")
    
-    n = {filter:reference_type_storage.reference_types[filter]}
-    print(n)
-    return render_template("base.html",refType=n)
+    #n = {filter:reference_type_storage.reference_types[filter]}
+    #print(n)
+    return render_template("base.html",refType=reference_type_storage.reference_types, filter=filter)
 
 @app.route("/printBibtex")
 def print_bibtex():
