@@ -16,17 +16,19 @@
   </form>
 
   <form action = "/submitReferenceInformation/" method="POST">
+    <input type = "hidden" value = {{filter}} name = "reference_type">
     {% for key,value in refType.items() %}
       {% if key == filter %}
-          {% for x in value %}
-            <br/>
-            {% if value is number %}
-              <b>{{x}}</b> <input id={{value}} type="number" name={{x}}>
-              {% else %}
-              <b>{{x}}</b>  <input id={{value}} type="text" name={{x}}> 
-            
-            {% endif %}
-          {% endfor %}
+
+        {% for x in value %}
+          <br/>
+          {% if value is number %}
+            <b>{{x}}</b> <input id={{value}} type="number" name={{x}}>
+            {% else %}
+            <b>{{x}}</b>  <input id={{value}} type="text" name={{x}}> 
+          
+          {% endif %}
+        {% endfor %}
       {% endif %}
         
     {% endfor %}

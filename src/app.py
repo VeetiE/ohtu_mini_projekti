@@ -18,18 +18,6 @@ def index():
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
 def result():
-    #reference_type = request.form["referenceType"]
-    #book_author = request.form["author"]
-    #book_name = request.form["title"]
-    #book_publisher = request.form["publisher"]
-    #book_address = request.form["address"]
-    #book_date = request.form["published"]
-#
-    #book = Book("book", book_author, book_name,
-    #            book_publisher, book_address, book_date)
-    #reference_storage.add_reference(book)
-    #print(reference_storage.reference_bank)
-
     reference_data = request.form
     print(reference_data)
     reference_storage.add_reference(reference_data)
