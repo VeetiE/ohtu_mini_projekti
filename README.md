@@ -7,6 +7,7 @@
 )  
 ## Dokumentointi  
 
+
 ### Definition of Done  
 Testien haaraumakattavuus on 80% *(poisluettuna triviaali koodi)*.  
 Robot framework testit on kirjoitettu ja menevät läpi.  
@@ -27,11 +28,11 @@ Kloonaa repositorio koneellesi käskyllä
 
 >**git clone https://github.com/MatiasSinisalo/ohtu_mini_projekti**
 
-Tämän jälkeen siirry kloonin juurihakemistoon (kansio, josssa on tiedosto "app.py") ja anna käsky 
+Tämän jälkeen siirry kloonin juurihakemistoon (kansio, josssa on tiedosto "app.py") ja anna käsky
 
 >**poetry install**
 
-Anna koneen asentaa riippuvuudet, tämän jälkeen siirry hakemistoon "src", sovellus käynnistyy käskyillä
+Anna koneen asentaa riippuvuudet, tämän jälkeen siirry hakemistoon "src", sovellus käynnistyy seuraavallilla käskyillä
 
 >**poetry shell**
 >
