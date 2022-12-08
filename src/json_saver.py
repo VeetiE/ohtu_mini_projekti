@@ -1,5 +1,4 @@
 import json
-from json import JSONEncoder
 
 
 class Converter(json.JSONEncoder):
@@ -23,4 +22,3 @@ def read_dictionary_from_json(filename):
             return data
     except:
         return data
-

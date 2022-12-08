@@ -13,7 +13,6 @@ class BibtexGenerator():
         for reference in self.reference_dict:
             current = self.reference_dict[reference]
             reference_type = current["reference_type"]
-            
             string = f"@{reference_type}"
             string += "{"
             string += f"{reference},"

@@ -1,4 +1,4 @@
-from json_saver import  save_dictionary_to_json, read_dictionary_from_json
+from json_saver import  save_dictionary_to_json
 
 
 class ReferenceBank:
@@ -27,7 +27,6 @@ class ReferenceBank:
             name = reference["title"].replace(" ", "")
         else:
             name = "misc"
-        
         generated = name[0:5].lower()
 
         if reference["year"]:
