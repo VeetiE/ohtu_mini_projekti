@@ -29,8 +29,6 @@ def result():
 
 @app.route("/referenceForm",methods=["GET","POST"])
 def reference_form():
-    if request.method == "POST":
-        fill = request.form["option"]
     return render_template("base.html",refType=reference_type_storage.reference_types)
 
 @app.route("/referenceForm/setFilter/", methods=["POST"])
