@@ -4,6 +4,9 @@ import json
 
 
 class TestJsonSaver(unittest.TestCase):
+    def setUp(self):
+        emptyDictionary = {}
+        save_dictionary_to_json(emptyDictionary, "unittest.json")
 
     def test_dictionary_with_one_element_saves_correctly(self):
         test_dictionary = {
