@@ -12,7 +12,7 @@
       <option value={{key}} name="option">{{key}}</option>
       {% endfor %}
     </select>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" id="submitButton">
   </form>
 
   <form action = "/submitReferenceInformation/" method="POST">
@@ -23,9 +23,9 @@
         {% for x in value %}
           <br/>
           {% if value is number %}
-            <b>{{x}}</b> <input id={{value}} type="number" name={{x}}>
+            <b>{{x}}</b> <input id={{x}} type="number" name={{x}}>
             {% else %}
-            <b>{{x}}</b>  <input id={{value}} type="text" name={{x}}> 
+            <b>{{x}}</b>  <input id={{x}} type="text" name={{x}}> 
           
           {% endif %}
         {% endfor %}
@@ -33,7 +33,7 @@
         
     {% endfor %}
       <br/>
-    <input type="submit" value="create new">
+    <input type="submit" value="create new" id="createNew">
   </form>
 
   

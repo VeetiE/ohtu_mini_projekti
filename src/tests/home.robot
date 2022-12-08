@@ -7,13 +7,13 @@ Test Setup  Go To Main Page
 
 *** Test Cases ***
 Main Page Should Be Open
-    Title Should Be   Etusivu
+    Title Should Be   BibTeX-viittaus generaattori
 
 Can Navigate To RefForm And Back
     Click Element  id:refFormLink
     Title Should Be  Viittaus Lomake
     Click Element  id:frontPageLink
-    Title Should Be   Etusivu
+    Title Should Be   BibTeX-viittaus generaattori
 
 *** Keywords ***
 Go To Main Page
