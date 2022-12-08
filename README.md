@@ -1,6 +1,8 @@
 # Ohtu miniprojekti  
 [![CI](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml/badge.svg)](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml)
 
+[![codecov](https://codecov.io/gh/MatiasSinisalo/ohtu_mini_projekti/branch/main/graph/badge.svg?token=XP59ESEXZK)](https://codecov.io/gh/MatiasSinisalo/ohtu_mini_projekti)
+
 [Uusin release](https://github.com/MatiasSinisalo/ohtu_mini_projekti/releases
 )  
 ## Dokumentointi  
