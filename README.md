@@ -21,8 +21,6 @@ Github-actions on hyväksynyt koodin.
 
 [CI](https://github.com/MatiasSinisalo/ohtu_mini_projekti/actions/workflows/main.yml)
 
-![Coverage](https://user-images.githubusercontent.com/101999632/205022006-d9e0613a-32c4-4e1d-bde3-68ed13f17ce5.png)
-
 ### Asennusohjeet
 
 Kloonaa repositorio koneellesi käskyllä
