@@ -15,7 +15,10 @@ def save_dictionary_to_json(dictionary, filename):
 
 def read_dictionary_from_json(filename):
     data = {}
-    with open(filename, "r", encoding="utf-8") as open_file:
+    try:
+        with open(filename, "r", encoding="utf-8") as open_file:
          data = json.load(open_file)
          open_file.close()
          return data
+    except:
+        return data
