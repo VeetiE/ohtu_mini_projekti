@@ -17,17 +17,19 @@
 
   <form action = "/submitReferenceInformation/" method="POST">
     {% for key,value in refType.items() %}
-      {% for x in value %}
-      <br/>
-        {% if value is number %}
-        <b>{{x}}</b> <input id={{value}} type="number" name="title"\>
-        {% else %}
-        <b>{{x}}</b>  <input id={{value}} type="text" name="title"\> 
-      
+      {% if key == filter %}
+          {% for x in value %}
+            <br/>
+            {% if value is number %}
+              <b>{{x}}</b> <input id={{value}} type="number" name="title"\>
+              {% else %}
+              <b>{{x}}</b>  <input id={{value}} type="text" name="title"\> 
+            
+            {% endif %}
+          {% endfor %}
       {% endif %}
-      {% endfor %}
-      
-      {% endfor %}
+        
+    {% endfor %}
       <br/>
     <input type="submit" value="create new">
   </form>
