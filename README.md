@@ -7,6 +7,7 @@
 )  
 ## Dokumentointi  
 
+
 ### Definition of Done  
 Testien haaraumakattavuus on 80% *(poisluettuna triviaali koodi)*.  
 Robot framework testit on kirjoitettu ja menevät läpi.  
