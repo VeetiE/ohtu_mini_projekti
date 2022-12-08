@@ -30,8 +30,15 @@ class ReferenceTypeBank:
             ]
     
     def add_new_reference_type(self, reference_type_name:str, reference_type_fields):
+        if len(reference_type_name) == 0 or len(reference_type_fields) == 0:
+            return False
+
+
         if reference_type_name not in self.reference_types:
             self.reference_types[reference_type_name] = list(reference_type_fields)
+            return True
+        
+        return False
         
 
 
