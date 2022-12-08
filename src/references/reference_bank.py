@@ -1,4 +1,3 @@
-from references.book import Book
 from json_saver import  save_dictionary_to_json
 
 
@@ -11,25 +10,37 @@ class ReferenceBank:
         self.reference_bank = {}
         self.running_number = 0
 
-    def add_reference(self, book: Book):
+    def _make_normal_dictionary(self, reference):
+        #flask returns an "ImmutableMultiDict" (ew), this makes it a regular dict
+        new_dict = {}
+        for element in reference:
+            new_dict[element] = reference[element]
+        return new_dict
 
-        ref_string = self.generate_reference_string(book)
-        self.reference_bank[ref_string] = book
-        save_dictionary_to_json(self.reference_bank, "testi.json")
+    def _generate_reference_string(self, reference):
+        if reference["author"]:
+            name = reference["author"].replace(" ", "")
+        elif reference["title"]:
+            name = reference["title"].replace(" ", "")
+        else:
+            name = "misc"
+        
+        generated = name[0:5].lower()
 
-    def generate_reference_string(self, book: Book):
-
-        name = book.author.replace(" ", "")
-        published = book.year
-
-        first_five_letters = name[0:5].lower()
-        generated = first_five_letters+str(published)
+        if reference["year"]:
+            generated += str(reference["year"])
 
         if generated in self.reference_bank.keys():
             generated += f"({self.running_number})"
             self.running_number += 1
 
         return generated
+
+    def add_reference(self, reference):
+        reference = self._make_normal_dictionary(reference)
+        ref_string = self._generate_reference_string(reference)
+        self.reference_bank[ref_string] = reference
+        save_dictionary_to_json(self.reference_bank, "testi.json")
 
     def get_reference_bank(self):
         return self.reference_bank

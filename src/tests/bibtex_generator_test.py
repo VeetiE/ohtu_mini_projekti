@@ -1,18 +1,25 @@
 import unittest
 from bibtex_generator import BibtexGenerator
-from references.book import Book
 from references.reference_bank import ReferenceBank
 
 
 class TestBibtexGenerator(unittest.TestCase):
     def setUp(self) -> None:
         self.test_library = ReferenceBank()
-        self.test_library.add_reference(Book(
-            "book", "Kaapo Kivioja", "Cooking with Kaapo", "University of Helsinki", "Helsinki, Finland", 2015))
+        self.book = {
+            "reference_type": "book",
+            "title": "Sopranos",
+            "author": "Joe Biden",
+            "publisher": "University of Helsinki",
+            "address": "Helsinki, Finland",
+            "year": 2001
+            }
+        self.test_library.add_reference(self.book)
 
     def test_bibtex_generator(self):
-        generator = BibtexGenerator(self.test_library.reference_bank)
+        generator = BibtexGenerator(self.test_library.get_reference_bank())
         bibtex = generator.make_bibtex_list()
+        print(bibtex)
 
-        self.assertAlmostEqual(
-            bibtex[0], "@book{kaapo2015,author=\"Kaapo Kivioja\",title=\"Cooking with Kaapo\",publisher=\"University of Helsinki\",address=\"Helsinki, Finland\",year=\"2015\"}")
+        self.assertEqual(
+            bibtex[0], "@book{joebi2001,reference_type=\"book\",title=\"Sopranos\",author=\"Joe Biden\",publisher=\"University of Helsinki\",address=\"Helsinki, Finland\",year=\"2001\",}")

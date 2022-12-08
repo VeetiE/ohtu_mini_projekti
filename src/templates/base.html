@@ -21,9 +21,9 @@
           {% for x in value %}
             <br/>
             {% if value is number %}
-              <b>{{x}}</b> <input id={{value}} type="number" name="title"\>
+              <b>{{x}}</b> <input id={{value}} type="number" name={{x}}>
               {% else %}
-              <b>{{x}}</b>  <input id={{value}} type="text" name="title"\> 
+              <b>{{x}}</b>  <input id={{value}} type="text" name={{x}}> 
             
             {% endif %}
           {% endfor %}

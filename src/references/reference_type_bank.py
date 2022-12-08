@@ -4,19 +4,19 @@ class ReferenceTypeBank:
     def __init__(self):
         #saves key=reference type, value = list of reference input fields, pairs
         self.reference_types = {
-               'book':["author","title","publisher","address","published"],
+               'book':["author","title","publisher","address","year"],
                'article':["author","title","journal","year"],
                'booklet':["title"],
                'conference':["author","title","journal","year"],
-               'inbook':["author","title","chapter","publisher","published"],
-               'incollection':["author","title","booktitle","publisher","published"],
-               'inproceedings':["author","title","booktitle","published"],
+               'inbook':["author","title","chapter","publisher","year"],
+               'incollection':["author","title","booktitle","publisher","year"],
+               'inproceedings':["author","title","booktitle","year"],
                'manual':["title"],
-               'mastersthesis':["author","title","school","published"],
+               'mastersthesis':["author","title","school","year"],
                'misc':[],
-               'phdhesis':["author","title","school","published"],
-               'proceedings':["title","published"],
-               'techreport':["author","title","institution","published"],
+               'phdhesis':["author","title","school","year"],
+               'proceedings':["title","year"],
+               'techreport':["author","title","institution","year"],
                'unpublished':["author","title"]
                }
                

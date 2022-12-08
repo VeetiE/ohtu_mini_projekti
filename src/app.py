@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import redirect, render_template, request
-from references.book import Book
 from references.reference_bank import ReferenceBank
 from bibtex_generator import BibtexGenerator
 from references.reference_type_bank import ReferenceTypeBank
@@ -20,20 +19,22 @@ def index():
 @app.route("/submitReferenceInformation/", methods=["POST"])
 def result():
     #reference_type = request.form["referenceType"]
-    book_author = request.form["author"]
-    book_name = request.form["title"]
-    book_publisher = request.form["publisher"]
-    book_address = request.form["address"]
-    book_date = request.form["published"]
+    #book_author = request.form["author"]
+    #book_name = request.form["title"]
+    #book_publisher = request.form["publisher"]
+    #book_address = request.form["address"]
+    #book_date = request.form["published"]
+#
+    #book = Book("book", book_author, book_name,
+    #            book_publisher, book_address, book_date)
+    #reference_storage.add_reference(book)
+    #print(reference_storage.reference_bank)
 
-    book = Book("book", book_author, book_name,
-                book_publisher, book_address, book_date)
-    reference_storage.add_reference(book)
-    print(reference_storage.reference_bank)
+    reference_data = request.form
+    print(reference_data)
+    reference_storage.add_reference(reference_data)
 
     return redirect("/")
-
-
 
 @app.route("/referenceForm",methods=["GET","POST"])
 def reference_form():
@@ -59,7 +60,7 @@ def reference_form_filtered(filter):
 
 @app.route("/printBibtex")
 def print_bibtex():
-    generator = BibtexGenerator(reference_storage.reference_bank)
+    generator = BibtexGenerator(reference_storage.get_reference_bank())
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
 
