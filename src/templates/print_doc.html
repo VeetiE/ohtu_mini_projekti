@@ -6,8 +6,23 @@
 <a href="/referenceTypesAdd" id="addNewReferenceType">Lisää uusi viittaustyyppi</a> 
 
 <h3>Viittaukset:</h3>
-<ul id="refInfos">
-{% for reference in references %} 
-<li>{{reference}}</li>
-{% endfor %}
-</ul>
+<table>
+	<thead>
+		<tr>
+			<th>Viittautunniste</th>
+			<th>Tekijä</th>
+			<th>Nimi</th>
+			<th>Julkaisuvuosi</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for key,value in content.items() %}
+		<tr>
+			<th>{{key}}</th>
+			<th>{{content[key]["author"]}}</th>
+			<th>{{content[key]["title"]}}</th>
+			<th>{{content[key]["year"]}}</th>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table> 
