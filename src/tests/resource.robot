@@ -2,8 +2,8 @@
 Library  SeleniumLibrary
 *** Variables ***
 ${SERVER}  localhost:5000
-${BROWSER}  headlesschrome
-${DELAY}  0.2 seconds
+${BROWSER}  chrome
+${DELAY}  0.01 seconds
 ${HOME URL}  http://${SERVER}
 ${FORM URL}  http://${SERVER}/referenceForm
 
@@ -14,5 +14,5 @@ Open And Configure Browser
     Set Selenium Speed  ${DELAY}
 
 Home Page Should Be Open
-    Title Should Be  Etusivu
+    Title Should Be  BibTeX-viittaus generaattori
 
