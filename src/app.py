@@ -12,8 +12,7 @@ reference_type_storage = ReferenceTypeBank()
 
 @app.route("/")
 def index():
-    return render_template("print_doc.html",
-    references=list(reference_storage.reference_bank.values()))
+    return render_template("print_doc.html", references=list(reference_storage.reference_bank.values()))
 
 
 @app.route("/submitReferenceInformation/", methods=["POST"])
@@ -38,12 +37,7 @@ def reference_form_set_filter():
     return redirect("/referenceForm/" + filter)
 
 @app.route("/referenceForm/<filter>")
-def reference_form_filtered(filter):
-  
-    print("hello")
-   
-    #n = {filter:reference_type_storage.reference_types[filter]}
-    #print(n)
+def reference_form_filtered(filter):   
     return render_template("base.html",refType=reference_type_storage.reference_types, filter=filter)
 
 @app.route("/printBibtex")
@@ -60,9 +54,5 @@ def reference_types_add():
 def reference_types_add_new():
     tyyppi = request.form["viittaustyyppi"]
     kentat = request.form.getlist("field")
-    print(tyyppi)
-    print(kentat)
-
     reference_type_storage.add_new_reference_type(tyyppi, kentat)
-    print(reference_type_storage.reference_types)
     return redirect("/referenceTypesAdd")
