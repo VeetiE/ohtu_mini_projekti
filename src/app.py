@@ -64,8 +64,14 @@ def print_bibtex():
     bibtex_list = generator.make_bibtex_list()
     return render_template("print_bibtex.html", bibtexlist=bibtex_list)
 
-@app.route("/referenceTypesAdd", methods = ["GET", "POST"])
+@app.route("/referenceTypesAdd")
 def reference_types_add():
-    if request.method == "POST":
-        pass
     return render_template("reference_types_add.html", refType =reference_type_storage.all_possible_types)
+
+@app.route("/referenceTypesAdd/add", methods = ["POST"])
+def reference_types_add_new():
+    tyyppi = request.form["viittaustyyppi"]
+    kentat = request.form.getlist("field")
+    print(tyyppi)
+    print(kentat)
+    return redirect("/referenceTypesAdd")

@@ -1,17 +1,23 @@
 <title>Viittaustyypin lisays</title>
 <h1>Lisää uusi viittaustyyppi</h1>
-<form>
+<form method="POST" action="/referenceTypesAdd/add">
+
     <fieldset>
         <legend>Valitse lisättävät kentät</legend>
-        
+        <label>Viittaustyyppi</label>
+        <b>{{x}}</b> <input id="tyyppi" type="text" name="viittaustyyppi"\> 
+
         {% for field in refType %}
 
         <div>
-            <input type = "checkbox" id = {{field}} name="field" value = "address"/>
+            <input type = "checkbox" id = {{field}} name="field" value = {{field}}>
             <label for = {{field}}>{{field}}</label>
         </div>    
 
-        {% endfor %}
+        {% endfor %} 
+        <div>
+            <button type = "submit">Lisää</button>
+        </div>
     </fieldset>
 </form>
 
