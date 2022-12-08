@@ -1,4 +1,4 @@
-from json_saver import  save_dictionary_to_json
+from json_saver import  save_dictionary_to_json, read_dictionary_from_json
 
 
 class ReferenceBank:
@@ -6,8 +6,9 @@ class ReferenceBank:
     Save references
     '''
 
-    def __init__(self):
-        self.reference_bank = {}
+    def __init__(self, references={}):
+        #WARINING:: running number WILL BE broken if there are duplicated in references
+        self.reference_bank = references
         self.running_number = 0
 
     def _make_normal_dictionary(self, reference):

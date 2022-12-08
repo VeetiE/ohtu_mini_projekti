@@ -3,12 +3,16 @@ from flask import redirect, render_template, request
 from references.reference_bank import ReferenceBank
 from bibtex_generator import BibtexGenerator
 from references.reference_type_bank import ReferenceTypeBank
+from json_saver import read_dictionary_from_json
 
 
 app = Flask(__name__)
 
-reference_storage = ReferenceBank()
+references_from_disk = read_dictionary_from_json("testi.json")
+reference_storage = ReferenceBank(references_from_disk)
+
 reference_type_storage = ReferenceTypeBank()
+
 
 @app.route("/")
 def index():
