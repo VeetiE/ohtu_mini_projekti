@@ -27,11 +27,17 @@ class ReferenceTypeBank:
             "type", "volume", "year"
             ]
     def add_new_reference_type(self, reference_type_name:str, reference_type_fields):
+        print(reference_type_name)
+        print(reference_type_fields)
         if len(reference_type_name) == 0 or len(reference_type_fields) == 0:
+            print("INVALID")
             return False
 
 
         if reference_type_name not in self.reference_types:
             self.reference_types[reference_type_name] = list(reference_type_fields)
+            print(self.reference_types)
             return True
+        
+        
         return False
