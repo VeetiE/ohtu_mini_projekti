@@ -1,5 +1,5 @@
 import unittest
-from json_saver import save_dictionary_to_json
+from json_saver import save_dictionary_to_json, read_dictionary_from_json
 import json
 
 
@@ -34,5 +34,18 @@ class TestJsonSaver(unittest.TestCase):
             open_file.close()
         
         self.assertDictEqual(saved_dictionary, test_dictionary)
+    
+    def test_dictionary_with_many_elements_is_read_correctly(self):
+        test_dictionary = {
+            "Key1": ["value1", "value2"],
+            "Key2": ["value1", "value2"],
+            "Key3": ["value1", "value2"],
+        }
+
+        save_dictionary_to_json(test_dictionary, "unittest.json")
+
+        read_dictionary = read_dictionary_from_json("unittest.json") 
+        
+        self.assertDictEqual(read_dictionary, test_dictionary)
 
 
