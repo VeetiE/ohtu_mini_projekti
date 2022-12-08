@@ -62,4 +62,7 @@ def reference_types_add_new():
     kentat = request.form.getlist("field")
     print(tyyppi)
     print(kentat)
+
+    reference_type_storage.add_new_reference_type(tyyppi, kentat)
+    print(reference_type_storage.reference_types)
     return redirect("/referenceTypesAdd")
