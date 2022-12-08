@@ -13,7 +13,12 @@ def save_dictionary_to_json(dictionary, filename):
         file.write(json_obj)
         file.close()
 
+
+def read_dictionary_from_json(filename):
+    data = None
     with open(filename, "r", encoding="utf-8") as openFile:
         data = json.load(openFile)
         openFile.close()
-    print(data)
+    return data
+
+
