@@ -1,10 +1,12 @@
 import unittest
 from references.reference_bank import ReferenceBank
-
+from json_saver import save_dictionary_to_json
 
 class TestReferenceBank(unittest.TestCase):
     def setUp(self):
-        self.ref = ReferenceBank()
+        emptyDictionary = {}
+        save_dictionary_to_json(emptyDictionary, "unittest.json")
+        self.ref = ReferenceBank({},"unittest.json")
         self.book = {
             "reference_type": "book",
             "title": "Sopranos",
@@ -17,7 +19,7 @@ class TestReferenceBank(unittest.TestCase):
     def test_generate_reference_string_correct(self):
         ans = self.ref._generate_reference_string(self.book)
 
-        self.assertEqual('joebi2001', ans)
+        self.assertAlmostEqual('joebi2001', ans)
 
     def test_get_correct_dictionary(self):
         self.ref.add_reference(self.book)
