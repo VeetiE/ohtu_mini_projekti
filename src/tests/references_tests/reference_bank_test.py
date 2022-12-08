@@ -1,10 +1,12 @@
 import unittest
 from references.reference_bank import ReferenceBank
-
+from json_saver import save_dictionary_to_json
 
 class TestReferenceBank(unittest.TestCase):
     def setUp(self):
-        self.ref = ReferenceBank()
+        emptyDictionary = {}
+        save_dictionary_to_json(emptyDictionary, "unittest.json")
+        self.ref = ReferenceBank({},"unittest.json")
         self.book = {
             "reference_type": "book",
             "title": "Sopranos",
