@@ -13,7 +13,6 @@ class ReferenceTypeBank:
                'inproceedings':["author","title","booktitle","year"],
                'manual':["title"],
                'mastersthesis':["author","title","school","year"],
-               'misc':[],
                'phdhesis':["author","title","school","year"],
                'proceedings':["title","year"],
                'techreport':["author","title","institution","year"],
