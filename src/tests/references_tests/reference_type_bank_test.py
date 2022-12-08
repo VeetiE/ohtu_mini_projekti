@@ -11,4 +11,3 @@ class TestReferenceTypeBank(unittest.TestCase):
 
         self.assertEqual(new_reference_type_name in self.reference_type_bank.reference_types, True)
         self.assertEqual(self.reference_type_bank.reference_types[new_reference_type_name], new_reference_type_fields)
-
